@@ -9,5 +9,5 @@ step2: add .
 
 step3: commit -m "initial files"
 
-step4: push using source control option in vscode
+step4: push using source control option in vscode(left extensions panel)
 ```
