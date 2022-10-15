@@ -13,6 +13,7 @@ npx tailwindcss init -p
 Configure your template paths
 Add the paths to all of your template files in your tailwind.config.js file.
 
+```
 module.exports = {
 content: [
 "./src/**/*.{js,jsx,ts,tsx}",
@@ -22,6 +23,7 @@ extend: {},
 },
 plugins: [],
 }
+```
 
 #### step3:
 
