@@ -10,7 +10,7 @@ The whole structure is called a ruleset. (The term ruleset is often referred to 
 
 ![image info](../images/ruleset.png)
 
-### style inherit
+### Style inherit
 
 Since html is the parent element of the whole page, all elements inside it inherit the same font-size and font-family.
 
