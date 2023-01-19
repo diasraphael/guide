@@ -12,7 +12,7 @@ The whole structure is called a ruleset. (The term ruleset is often referred to 
 
 ### style inherit
 
-Since <html> is the parent element of the whole page, all elements inside it inherit the same font-size and font-family.
+Since html is the parent element of the whole page, all elements inside it inherit the same font-size and font-family.
 
 ```
 html {
