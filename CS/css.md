@@ -4,6 +4,8 @@ is the code that styles web content.
 
 CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements.
 
+### Rule or ruleset
+
 ![image info](../images/ruleset.png)
 
 The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.)
