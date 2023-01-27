@@ -21,7 +21,7 @@ It is the short hand for git fetch and git merge branchname
 
 ## Git workflow
 
-![image info](../images/git-workflow.png)
+![image info](../../images/git-workflow.png)
 
 ### Develop
 
