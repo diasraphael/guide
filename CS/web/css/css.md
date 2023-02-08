@@ -38,7 +38,10 @@ html {
 
 1. Good practise to have one h1 in a page
 2. we need to mention lang attribute to en to html
+
+```
 <html lang="en">
+```
 
 3. jonas.io (resources links)
 4. line-height: 1.5(without giving px it will be 1.5 times of the font-size of the element)
@@ -49,7 +52,11 @@ html {
 9. to provide spaces between elements always prefer margins, and to provide vertical space choose margin bottom.
 10. only width or height is enough to automatically scale the image.(dont want to mention both, avoid mentioning in html along with image inline style)
 11. centering our page trick
+
+````
     .container{
     width: 700px;
     margin: 0 auto;
     }
+    ```
+````
