@@ -13,8 +13,8 @@ closing tag
 
 #### Semantic elements
 
-b to strong
-i to em
+b to strong  
+i to em  
 you can wrap nav and h1 tag under header tag(to be semantic tags)
 
 ### Rule or ruleset
