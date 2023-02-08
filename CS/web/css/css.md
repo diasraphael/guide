@@ -46,3 +46,10 @@ html {
 6. a:link selects all the anchor tag with href attribute
 7. order of adding style to a tag is link, visited, hover, active
 8. final width of the element = left border + left padding + content + right padding + right border
+9. to provide spaces between elements always prefer margins, and to provide vertical space choose margin bottom.
+10. only width or height is enough to automatically scale the image.(dont want to mention both, avoid mentioning in html along with image inline style)
+11. centering our page trick
+    .container{
+    width: 700px;
+    margin: 0 auto;
+    }
