@@ -53,10 +53,9 @@ html {
 10. only width or height is enough to automatically scale the image.(dont want to mention both, avoid mentioning in html along with image inline style)
 11. centering our page trick
 
-````
+```
     .container{
     width: 700px;
     margin: 0 auto;
     }
-    ```
-````
+```
