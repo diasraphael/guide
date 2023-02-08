@@ -6,9 +6,9 @@ CSS is not a programming language. It's not a markup language either. CSS is a s
 
 #### Element
 
-3 parts
-opening tag
-content
+3 parts  
+opening tag  
+content  
 closing tag
 
 #### Semantic elements
