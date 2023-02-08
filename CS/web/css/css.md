@@ -34,10 +34,15 @@ html {
 }
 ```
 
-Note:
+### Notes:
 
 1. Good practise to have one h1 in a page
 2. we need to mention lang attribute to en to html
 <html lang="en">
 
 3. jonas.io (resources links)
+4. line-height: 1.5(without giving px it will be 1.5 times of the font-size of the element)
+5. article header p {} will make the structure not maintainable should avoid this
+6. a:link selects all the anchor tag with href attribute
+7. order of adding style to a tag is link, visited, hover, active
+8. final width of the element = left border + left padding + content + right padding + right border
