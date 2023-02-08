@@ -21,7 +21,7 @@ you can wrap nav and h1 tag under header tag(to be semantic tags)
 
 The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.)
 
-![image info](../images/ruleset.png)
+![image info](images/ruleset.png)
 
 ### Style inherit
 
