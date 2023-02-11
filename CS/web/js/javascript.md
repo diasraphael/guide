@@ -37,6 +37,8 @@ ES2020/ES11
 5. heap is where the objects are stored.
 6. code is parsed and then it is compiled and then it is executed.execution happens in call stack.
    ![js runtime image](./images/jsruntime.png)
+7. execution context: global execution context is created. javascript is executed in the execution context.first top level code will be declared eg: variable declaration, functions.after that execution of functions and callback are excuted when event loop tells which one to execute.
+8. there are global scope, function scope, block scope.
 
 #### compilation vs Interpretation
 
@@ -60,6 +62,14 @@ code written in ES2089 will not work in current browser.
 In production we can use transpilers and polyfilling to support old browsers  
 ES5 is support in all browsers eg: works in IE11  
 javascript dont support forward compatibility
+
+#### hoisting
+
+variables are lifted to the top of their scope.function declarations are hoisted.var is hoisted .let and const are not hoisted.function expression are hoisted depends on whether it is declared with ler or var.
+
+#### temporal dead zone
+
+accessing variables before declaration is bad practise and should be avoided.
 
 #### Dynamic typing:
 
@@ -171,7 +181,27 @@ console.log(obj['calcAge']())  // calling method using bracket syntax
 2. we can modify the html structure using document object
 3. DOM methods and properties not part of javascript instead they are the apis of browsers
 4. timers, fetch api is also from browser apis
-5.
+
+#### copying objects using Object.assign({},obj)
+
+object.assign will do a shallow copy of the object
+
+```
+let obj = {
+firstName: 'Dias',
+lastName: 'raphael',
+friends:['x','y','z']
+}
+let newObj = Object.assign({},obj)
+newObj.firstName = 'anie';
+console.log(obj) // will print an obj with firstname as Dias
+console.log(newObj)  // will print an obj with firstname as anie
+newObj.friends.push('ac')
+console.log(obj) // will print an obj with friends as ['x','y','z', 'ac'] , both will point to the same updated object
+console.log(newObj)  // will print an obj with firstname as ['x','y','z', 'ac'v]
+```
+
+to avoid this we need to do a deep copy which is not easy.TODO to know more
 
 ## Notes:
 
