@@ -1,8 +1,17 @@
 # Javascript
 
-1. high level language (dont want to deal about memory management ?TODO)
-2. multi paradigm (we can use multiple styles of programming declarative ?TODO ,imperative ?TODO)
+1. high level language = need memory to store variable, in high level language it will be done automatically
+   in low level language like c the developer need to manage resource manually.(memory management will be done under the hood)
+2. multi paradigm (approach and mindset of structuring code which will direct your coding style and technique)
+   procedural, object oriented programming, functional programming
 3. object oriented (based on objects, for storing most kinds of data)
+4. garbage collected(garbage will be collected automatically)
+5. javascript is interpreted or just in time compile.code is converted to machine code 0s and 1s.this step is called compiling or interpreting.this is done in javascript engine.
+6. prototype based object oriented
+7. first class functions, functions are simply treated as variables.we can pass them into other functions and return them from functions.
+8. dynamically typed.
+9. single threaded
+10. non blocking event loop: handles multiple task at same time. javascript runs in one single thread.so it can only do one thing at a time.so how do we achieve multiple task at a time. answer is event loop. even loop takes long running tasks and executes them in the background. and puts them in the main thread once they are finished.
 
 ### Releases
 
@@ -18,6 +27,26 @@ ES2015/ES6
 ES2016/ES7  
 ...  
 ES2020/ES11
+
+#### JS engine
+
+1. program that executes javascript code.
+2. v8 in chrome, nodejs
+3. js engine has call stack, heap
+4. call stack is where the code is executed
+5. heap is where the objects are stored.
+6. code is parsed and then it is compiled and then it is executed.execution happens in call stack.
+   ![js runtime image](./images/jsruntime.png)
+
+#### compilation vs Interpretation
+
+compilation: entire code is converted into machine code at once and written to binary file that can be executed by a computer.
+
+Interpretation: runs through the source code and executes it line by line.
+
+Just in time compilation: entire code is converted into machine code at once then executed immediately.
+
+#### imperative vs declarative
 
 #### Backward compatibility:
 
