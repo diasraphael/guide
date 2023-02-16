@@ -238,23 +238,24 @@ to avoid this we need to do a deep copy which is not easy.TODO to know more
 
 #### Destructuring objects
 
-````
+```
 const restaurant ={
 name: 'cook with comali',
 openinghours: 'friday'
-}```
+}
+```
 
 const {name, openingHours} = restaurant;
 
 1. renaming
-   ``` const {name: restaurantName, openingHours: hours}= restaurant ```
+   `const {name: restaurantName, openingHours: hours}= restaurant`
 2. default values
-   ``` const {name: restaurantName = 'KFC', openingHours: hours = '9am'}= restaurant```
+   `const {name: restaurantName = 'KFC', openingHours: hours = '9am'}= restaurant`
 
 #### spread operator
 
-
 1. copy arrays( shallow copy the elements just like assign())
+
 ```
    const a = [1,2]
    const b = [3,4]
@@ -262,6 +263,7 @@ const {name, openingHours} = restaurant;
    console.log(c)  // prints [1, 2]
 
 ```
+
 2. Join 2 arrays
 
 ```
@@ -278,4 +280,3 @@ const {name, openingHours} = restaurant;
 2. Javascript can be used in the native mobile applications(ionic, react)
 3. Javascript can be used in the native desktop applications(electron)
 4. instead of multiple if else block we can include switch so we can avoid multiple conditions and switch will be much more clear.
-````
