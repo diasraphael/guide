@@ -1,5 +1,38 @@
 # GIT
 
+### GIT vs GITHUB
+
+1. GIT is a distributed version control system
+2. GIT helps in tracking different versions of the file
+3. GIT helps in collaborating with multiple people in the team
+4. GITHUB is the repository hosting service
+
+### ZSH
+
+1. its a custom shell with some good information of the screen
+2. we need to set this as a default shell if we need to use it.
+
+### Basic shell cmds
+
+1. mkdir - to make directory
+2. ls to list files and directories
+3. . alias of the current directory
+4. .. alias of the parent directory
+5. clear - to clear the terminal
+6. echo - to print in the terminal
+7. touch to create a file
+8. nano to edit a file
+9. echo "hello" > file.txt // creates a file and inserts the code in the file
+10. cat file.txt // print hello in terminal
+11. > > appends to the file // echo "Dias" >> file.txt
+12. rm -rf folder-name // to delete the file without asking for permission
+
+### git init
+
+1. creates a new git repository
+2. creates .git folder within the root folder
+3. .git folder is managed by git and dont modify manually.
+
 To list all the branches
 `git branch`
 
