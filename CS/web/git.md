@@ -5,7 +5,8 @@
 1. GIT is a distributed version control system
 2. GIT helps in tracking different versions of the file
 3. GIT helps in collaborating with multiple people in the team
-4. GITHUB is the repository hosting service
+4. SHA1 is used by GIT ie is 160bits
+5. GITHUB is the repository hosting service
 
 ### ZSH
 
@@ -32,6 +33,48 @@
 1. creates a new git repository
 2. creates .git folder within the root folder
 3. .git folder is managed by git and dont modify manually.
+
+### working directory vs staging directory vs git repository
+
+1. staging area sits between the working directory and git repository
+2. from working directory we need to add the files to staging area to push into git repository
+3. git ls-files -s
+
+### setting username and email for git
+
+1. git config --global user.name "Dias"
+2. git config --global user.email "diasraphael88@gmail.com"
+3. git config --list
+
+### staging and unstaging
+
+1. git add file.txt // to stage a file
+2. git rm --cached file.txt // to unstage a file
+
+### branch
+
+1. default branch is master
+2. branch pointer moves automatically after ever new commit.
+
+### head
+
+1. head is reference to the currently checkout branch or commit
+2. there is only one head
+
+### merging branching
+
+a. git checkout master
+b. git merge feature
+
+#### merging process
+
+1. fast forward merge: there are 2 branches master,feature. we have added some commits in feature branch and now we want to merge it back to master. so we check out master branch and then we will give command as git merge feature. then git checks if there are any commits on top of master after feature branch has been created. if not it will do fast forward merge ie it will move the head after merging the commits from feature to master and head will be on top. if there are commits on top of master, then fast forward is not possible.
+
+![merging branches](../../images/merging%20branches.png)
+![fast forward](../../images/fast-forward.png)
+
+2. 3 way merge:
+   there are 2 branches master,feature. we have added some commits in feature branch and now we want to merge it back to master. so we check out master branch and then we will give command as git merge feature. then git checks if there are any commits on top of master after feature branch has been created. if present then git decides to do 3 way merge.
 
 To list all the branches
 `git branch`
@@ -143,3 +186,12 @@ Inside gitconfig
 
 alias gs 'git status'
 ```
+
+## Notes
+
+1. git cat-file -p <hash> contents of the object // to read the information of the object
+2. git cat-file -s <hash> size of the object
+3. git cat-file -t <hash> type of the object
+4. create new git blob object // git hash-object filname -w
+5. blob will have the contents of the file
+6. git log // to see the history of changes(commits)
