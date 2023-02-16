@@ -203,9 +203,79 @@ console.log(newObj)  // will print an obj with firstname as ['x','y','z', 'ac'v]
 
 to avoid this we need to do a deep copy which is not easy.TODO to know more
 
+#### Destructuring arrays
+
+1. unpacking of elements and original array is not modified
+
+```
+   const [a,b,c] = [1,2,3]
+   console.log(a,b,c) // prints 1 2 3
+
+   let [main, , secondary] = ['apple', 'banana', 'mango']
+   console.log(main, secondary)
+
+```
+
+2. switching between variables
+
+```
+   const temp = main;
+   main = secondary;
+   secondary = main; // old way
+
+[main, secondary] =[secondary, main] // new way to switching values without temproary variable
+```
+
+3. return 2 values from the function
+
+```
+   function result(){
+   return [1, 2]
+   }
+   const [main, secondary] = result()
+   console.log(main, secondary) // prints 1, 2
+```
+
+#### Destructuring objects
+
+````
+const restaurant ={
+name: 'cook with comali',
+openinghours: 'friday'
+}```
+
+const {name, openingHours} = restaurant;
+
+1. renaming
+   ``` const {name: restaurantName, openingHours: hours}= restaurant ```
+2. default values
+   ``` const {name: restaurantName = 'KFC', openingHours: hours = '9am'}= restaurant```
+
+#### spread operator
+
+
+1. copy arrays( shallow copy the elements just like assign())
+```
+   const a = [1,2]
+   const b = [3,4]
+   const c = [...a]
+   console.log(c)  // prints [1, 2]
+
+```
+2. Join 2 arrays
+
+```
+   const a = [1,2]
+   const b = [3,4]
+
+   const c = [...a, ...b]
+   console.log(c)  // prints [1,2,3,4]
+```
+
 ## Notes:
 
 1. Javascript can be used in the web servers(run outside of browsers eg: nodejs)
 2. Javascript can be used in the native mobile applications(ionic, react)
 3. Javascript can be used in the native desktop applications(electron)
 4. instead of multiple if else block we can include switch so we can avoid multiple conditions and switch will be much more clear.
+````
