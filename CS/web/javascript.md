@@ -98,11 +98,40 @@ Number('Dias') // returns NaN
 === will check the type and the value(will not perform coercion).prefer always this operator.
 == will perform coercion and checks the value
 
+#### nullish coalescing operator ??
+
+```
+const value = 0;
+const guest =value ?? 10; // ?? check for null and undefined only
+console.log(guest) // prints 0
+
+const value = 0;
+const guest =value || 10; // ?? check for truthy value
+console.log(guest) // prints 10
+
+guest ??= 10  // this is also possible
+```
+
+#### optional chaining
+
+console.log(restaurant.openinghours?.mon?.open)
+console.log(restaurant.order?.(0,1) ?? 'method does not exist') //calling methods
+
 #### use strict
 
 it has to be the first line of the code.  
 it forbids to introduce new errors.  
 it creates visible errors on the developer console otherwise it will fail silently.
+
+#### for of loop
+
+```
+for (const item of items)
+   console.log(item)
+
+for (const [i,element] of items.entries())
+   console.log(`${i}: ${element}`)
+```
 
 #### functions
 
@@ -173,7 +202,42 @@ const namekey = 'Name'
 
 console.log(obj['first'+nameKey])
 console.log(obj['calcAge']())  // calling method using bracket syntax
+
+Object.keys(obj) will give ['firstName','lastName','birthYear']
+Object.values(obj) will give ['Dias','Raphael','1988']
+Object.entries(obj) will give [key,value]
 ```
+
+#### sets
+
+1. will contain unique values
+2. has,add,delete,for of to print the values,size
+
+#### maps
+
+1. keys can be of any type but in object it can be only string that is the big difference between object and map
+2. set() method to add new element in map
+3. get(key) to retrieve the corresponding element
+4. has method to check if the element exist
+5. size to get length
+6. alternate for set
+7. to iterate use for(const [key, value] of question)
+
+```
+const map= new Map([['question','what is your name'],['1','java']])
+```
+
+#### when to use maps vs object and arrays vs set
+
+1. arrays - when we need ordered data and can be duplicates
+2. sets - when data is unique
+
+3. objects -when you use strings as keys, when you need function within object, when you need to convert to json
+4. maps -can use any type as keys, simply need to map key and values
+
+#### strings
+
+methods: indexOf, slice, lastIndexOf, toLowerCase, toUpperCase, trim(), replace(used to replace currency to another currency, comma to dot), includes(), startsWith(), endsWith(), split(), join(), padStart(to mask number to \*)
 
 #### DOM
 
@@ -254,6 +318,8 @@ const {name, openingHours} = restaurant;
 
 #### spread operator
 
+to unpack the elements and it will be on the right side of the =(assignment operator)
+
 1. copy arrays( shallow copy the elements just like assign())
 
 ```
@@ -272,6 +338,18 @@ const {name, openingHours} = restaurant;
 
    const c = [...a, ...b]
    console.log(c)  // prints [1,2,3,4]
+```
+
+#### rest operator
+
+to pack the elements and it will be on the left side of the =(assignment operator). and rest element must be the last.
+
+```
+function add(...numbers){
+console.log(numbers.length) // 6
+}
+add(1,1,4,3,4,6);
+
 ```
 
 ## Notes:
