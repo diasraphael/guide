@@ -165,6 +165,51 @@ const calculate = (value)=>value
 
 this keyword is not available in arrow function
 
+4. first class
+
+a. first class means functions are simply values(store functions in variables)
+b. functions are just another type of object(pass functions as arguments to other functions and return functions from functions)
+c. call methods on functions(bind)
+
+5. higher order function
+
+a. function that receives another function as an argument that returns a new function or both.
+
+```
+ btnclose.addEventListener('click', greet) // addEventListener is an higher order function and greet as callback function.
+```
+
+b. function returning another function
+
+```
+function count(){  // higher order function
+let counter = 0;
+return function(){  // returned function
+counter ++;
+}
+}
+```
+
+6. call, apply, bind methods
+
+a. call method is used point to the current this object
+
+7. IIFE(immediately invoked function expression)
+
+```
+(function (){
+console.log('Hello')
+})()
+
+(()=>console.log('HELLO'))()
+```
+
+8. Closures
+
+a. A function has access to the variable environment of the execution context in which it was created.
+b. closure gives a function access to all the variables of its parent function even after the parent function has returned.
+c. closure makes sure that a function doesnt loose connection to variables that existed at the functions birth place.
+
 #### Arrays
 
 push method returns the length of the array
@@ -183,6 +228,17 @@ const deletedElement = arrayName.pop('Raphael') // Raphael
 includes method returns whether the element exist in the array or not
 
 indexOf method returns index of the element where it is present
+const arr = ['a', 'b' ,'c' ,'d', 'e']
+
+1. slice method array.slice(2) // returns a new array with the elements ['c' ,'d', 'e']
+
+2. splice method modifies the original array.
+
+3. reverse method modifies the original array.
+
+4. at method returns the value using the index value
+
+### forEach and for of
 
 #### Objects
 
@@ -245,6 +301,13 @@ methods: indexOf, slice, lastIndexOf, toLowerCase, toUpperCase, trim(), replace(
 2. we can modify the html structure using document object
 3. DOM methods and properties not part of javascript instead they are the apis of browsers
 4. timers, fetch api is also from browser apis
+5. dom manipulation methods innerHtml,insertAdjacentHTMLElements(check the name)
+
+#### Data Transformations(direction towards functional programming(using the below methods))
+
+1. map - similar to foreach but returns new array
+2. filter - returns a new filtered array
+3. reduce - reduce all array elements down to a single value(adding all elements together)
 
 #### copying objects using Object.assign({},obj)
 
