@@ -302,12 +302,26 @@ methods: indexOf, slice, lastIndexOf, toLowerCase, toUpperCase, trim(), replace(
 3. DOM methods and properties not part of javascript instead they are the apis of browsers
 4. timers, fetch api is also from browser apis
 5. dom manipulation methods innerHtml,insertAdjacentHTMLElements(check the name)
+6. In DOM there are different types of nodes.some are html elements and some are just text.every single type of element is a node and each node represent a javascript object.
+7. An element type has internally an HTML element(HTMLButtonElement, HTMLDivElement) child type.
 
 #### Data Transformations(direction towards functional programming(using the below methods))
 
-1. map - similar to foreach but returns new array
+1. map - similar to foreach(modifies the original array) but returns new array
 2. filter - returns a new filtered array
 3. reduce - reduce all array elements down to a single value(adding all elements together)
+4. find - method finds the first element which satisfies the condition
+5. findIndex- method returns the corresponding index of the array
+6. some -
+7. every - every element in the array satisfies the condition then returns true
+8. flat - this will help to flat the nested array within a array(it goes 1 level deep ie flat(1))
+9. flatmap - flat + map (always does 1 level deep)
+10. fill - method used to fill the array with numbers(Array.from({length:7},()=>1) also used for this purpose)
+
+#### sorting
+
+1. sort method will help you to sort the strings
+2. to sort the number pass the callback function to sort it based on asc or desc
 
 #### copying objects using Object.assign({},obj)
 
@@ -415,9 +429,73 @@ add(1,1,4,3,4,6);
 
 ```
 
+#### Numbers
+
+1. Number('23') // will convert to number 23
+2. console.log(+'23') will convert to number 23
+3. to check if a value is number use Number.isFinite()
+4. to check if a value is integer use Number.isInteger()
+5. toFixed() will always return string
+6. math.round() returns rounded value for eg 23.6 will give 24
+7. math.ceil() returns rounded value for eg 23.6 will give 24
+8. math.floor() returns rounded value for eg 23.6 will give 23
+9. const a =783456349856n // to represent numbers in bigInt
+
+#### numeric separators
+
+const num = 98*237_098_237_489 // we can use * to separate the numbers
+
+#### Dates
+
+Z in the date means coordinated universal time without any time zone in london without any day light savings
+
+```
+const date = new Date();
+console.log(date.toISOString())
+```
+
+To get the timestamp
+
+```
+console.log(date.getTime())
+```
+
+To display date like day/month/year
+
+```
+const now = new Date();
+const day = `${now.getDate()}`.padStart(2,0);
+const month = `${now.getMonth() + 1}`.padStart(2,0); // +1 due to month starts from 0
+const year = now.getFullYear();
+const hour = now.getHours();
+const min = now.getMinutes();
+
+labeldate.textContent =`${day}/${month}/${year}, ${hour}:${minutes}`
+```
+
+#### Internationalization
+
+```
+const now = new Date();
+const options={
+hour: 'numeric',
+minute: 'numeric',
+day: 'numeric',
+month: 'long',
+year:'numeric',
+weekday: 'long'
+}
+
+const local = navigator.language;  // or
+const localCopy = 'en-US'  // or
+
+labelDate.textContent = new Intl.DateTimeFormat(local,options).format(now)
+```
+
 ## Notes:
 
 1. Javascript can be used in the web servers(run outside of browsers eg: nodejs)
 2. Javascript can be used in the native mobile applications(ionic, react)
 3. Javascript can be used in the native desktop applications(electron)
 4. instead of multiple if else block we can include switch so we can avoid multiple conditions and switch will be much more clear.
+5. function should always receive an argument and should not work on the global value
