@@ -492,6 +492,45 @@ const localCopy = 'en-US'  // or
 labelDate.textContent = new Intl.DateTimeFormat(local,options).format(now)
 ```
 
+#### events && event handlers
+
+mouseEvent
+
+#### Bubbling & capturing
+
+In the capturing phase the click traverses from the parent element to the target element. it does not goes through sibling
+
+In the bubbling phase, the event then traverse back to the root element. when you dont want the event to bubble up in their parent element we can use e.stopPropagation
+
+#### event delegation
+
+1. add event listener to the common parent
+2. determine from what element originated the event
+3. can be used in nav bar click implementation where there are many links and to avoid performance issues by not to add as many event listeners to all the links available.
+
+```
+document.querySelector('.nav__links').addEventListener('click',function(e){
+e.preventDefault();
+if(e.target.classList.contains('nav__link)){
+const id=e.target.getAttribute('href');
+document.querySelector(id).scrollIntoView({behaviour: 'smooth'})
+}
+})
+```
+
+#### lifecycle DOM Events
+
+1. DOMContentLoaded: when all the scripts and styles are loaded this will be executed but it wont wait for images and fonts to get loaded
+2. this is not needed in regular javascript since script.js file will be present in the bottom so all the DOM content will be loaded before th script js is loaded.
+3. load : when all script, styles, images, fonts are loaded this will be executed
+4. beforeUnload: when user leaves the page this will be fired
+
+#### Regular vs async vs defer
+
+1. regular: scripts are fetched and executed after the HTML is completely parsed.
+2. async : scripts are asynchronously and executed immediately.DOMContentLoaded does not wait for the async scripts.
+3. defer: scripts are fetched asynchronously and executed after the HTML is completely parsed.DOMContentLoaded event fires after defer script is executed. scripts are executed in order
+
 ## Notes:
 
 1. Javascript can be used in the web servers(run outside of browsers eg: nodejs)
@@ -499,3 +538,109 @@ labelDate.textContent = new Intl.DateTimeFormat(local,options).format(now)
 3. Javascript can be used in the native desktop applications(electron)
 4. instead of multiple if else block we can include switch so we can avoid multiple conditions and switch will be much more clear.
 5. function should always receive an argument and should not work on the global value
+
+## links
+
+1. https://github.com/jonasschmedtmann/complete-javascript-course
+
+## Techniques
+
+#### Smooth Scrolling
+
+```
+const btn =document.querySelector('.btn');
+const section1 =document.querySelector('.section1')
+btn.addEventListener('click',function(e){
+const coordinates = section1.getBoundingClientRect()
+
+window.scrollTo({
+left:coordinates.left +window.pageXOffset,
+top:coordinates.top +window.pageYOffset,
+behaviour: smooth
+})
+
+or
+
+window.scrollIntoView({behaviour :'smooth'})
+})
+```
+
+#### Scroll event(implementing sticky navigation)
+
+method1:(low performance)
+
+const initialCoordinates = section1.getBoundingClientRect()
+window.addEventListener('scroll', function(){
+if(window.scrolly> initialCoordinates.top)
+nav.classList.add('sticky')
+else
+nav.classList.remove('sticky')
+})
+
+The intersection observer api:
+
+const obsCallback = function(entries, observer){
+entries.forEach(entry=>{
+console.log(entry)
+})
+}
+
+const obsOption = {
+root: null,
+threshold:[0,0.2]
+}
+const observer = new IntersectionObserver(obsCallback,obsOptions);
+observer.observe(section1)
+
+#### revealing elements on scroll
+
+.section-hidden{
+opacity: 0;
+transform:translateY(8rem);
+}
+
+1. reveal section
+
+```
+   const allSections = document.querySelectorAll('.section')
+   const revealSection =function(entries, observer){
+   const [entry] =entries
+   if(!entry.intersecting)
+   return
+   entry.target.classList.remove('section-hidden')
+
+   observer.unobserve(entry.target)
+   }
+   const sectionObserver = new IntersectionObserver(revealSection, {
+   root: null,
+   threshold: .15
+   })
+   allSections.forEach(function(section){
+   sectionObserver.observe(section)
+   section.classList.add('section-hidden')
+   })
+```
+
+#### lazy loading with observer api
+
+```
+const imgTargets = document.querySelectorAll('img[data-src]');
+
+const loadImg =function (entries, observer){
+const [entry] =entries
+
+if(!entry.isIntersecting)
+return
+
+entry.target.src = entry.target.dataset.src
+
+entry.target.addEventListener('load', function(){
+entry.target.classList.remove('lazy-img')
+})
+
+observer.unobserve(entry.target)
+}
+
+const imgObserver = new IntersectionObserver(loadImg, {root: null,threshold: 0, rootMargin: 200px})
+imgTargets.forEach(img=>imgObserver.observe(img))
+```
