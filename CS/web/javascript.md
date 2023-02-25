@@ -50,6 +50,44 @@ Just in time compilation: entire code is converted into machine code at once the
 
 #### imperative vs declarative
 
+#### paradigm
+
+style of code, how we organize and write our code. to avoid spagetti code we have introduced different paradigms such as oop and functional programming.
+
+1. OOP:we use objects to model real world objects.objects are self contained block of code. by using objects we pack data and the corresponding behaviour into one block.
+2. abstraction:Ignoring and hiding the details that dont matter.
+3. encapsulation:keeping properties and methods private inside the class so that they are not accessible outside the class. some methods can be exposed as a public interface.
+4. Inheritance: making methods and properties available to child class using inheritance. this allows as to reuse common logic.
+5. Polymorphism: child class can overrite a method inherited from the parent class
+
+#### OOP in Javascript: prototypes
+
+1. objects are linked to prototype object.
+2. prototypal inheritance / delegation: The prototype contains methods that are accessible to all objects that are linked to that prototype.
+3. behaviour is delegated to the linked prototype object.
+4. when we create object ,we should not add the function to object instead add it like Person.prototype.calcAge=function(){console.log('hello')}. this way the calcAge function is not added as many times an object is created. to avoid copies we add it to the prototype.hasOwnProperty is to check whether the properties or methods are part of the own object.
+
+5. we can add new customised method to builtin methods(eg) Array.prototype.unique = function(){}
+
+#### how do we create prototypes? how do we link object to prototype? how can we create new objects without having classes
+
+1. constructor functions: technique to create objects from function. this is how builtin objects like arrays and maps and sets are actually implemented.
+
+2. ES6 Classes: alternative to constructor functions.ES6 classes work exactly like constructor functions but ES6 classes do not behave exactly like classical OOP. when we add a function within a class it will automatically added to prototype. classes are first class citizens that means we can pass the class as a variable.classes are executed in strict mode.getters and setters are not called with getLatest() instead called as getLatest.
+
+private fields will be starting with #  
+protected fields will be starting with underscore  
+we can also chain the methods in classes by returning this from every method.
+
+3. object.create is the straight forward way of linking an object to prototype object.
+   const PersonProto = {
+   calcAge: function(){
+   return 'Dias'
+   }
+   }
+
+   const steven = Object.create(PersonProto) // calcAge will be added to the prototype
+
 #### Backward compatibility:
 
 code written in 1997 put in new browser will work  
