@@ -185,6 +185,16 @@ git config alias.p push
 Inside gitconfig
 
 alias gs 'git status'
+
+To go back to the previous commit
+
+git reset --hard HEAD
+
+to go back to previous committed commit
+
+git reset --hard commitID
+
+you can get the commitID by typing git log
 ```
 
 ## Notes
@@ -195,3 +205,5 @@ alias gs 'git status'
 4. create new git blob object // git hash-object filname -w
 5. blob will have the contents of the file
 6. git log // to see the history of changes(commits)
+
+`https://education.github.com/git-cheat-sheet-education.pdf`
