@@ -50,6 +50,30 @@ Just in time compilation: entire code is converted into machine code at once the
 
 #### imperative vs declarative
 
+1. imperative: how to do things
+2. we explain the computer each and every step what to do achieve a result
+3. declarative: programmer tells what to do
+4. we simply tells the way the computer should achieve the result
+
+#### functional programming
+
+1. declarative programming paradigm
+2. combining many pure functions avoiding side effects and mutating data
+3. side effect: modification(mutate) of any data outside of the function(mutating external variables, logging to the console, writing to DOM)
+4. pure functions: functions without side effects, does not depend on external variables. given the same input always return the same outputs.
+5. immutatiblity: state is never modified, instead state is copied and the copy is mutated and returned.
+6. use array and object destructuring
+7. use spread operator
+8. use ternary operator
+
+#### MVC architecture
+
+1. like house we need a structure, the way we organise our code.
+2. we need to be able to easily change it in the future.(maintainability)
+3. we need to able to add new features
+4. components of any architecture business logic, state, http library, application router,presentation logic
+5. mvc: model, view, controller
+
 #### paradigm
 
 style of code, how we organize and write our code. to avoid spagetti code we have introduced different paradigms such as oop and functional programming.
@@ -605,15 +629,83 @@ when we call a fetch api we will store it in a variable which will have a promis
 ```
 const getCountryData = function(){
 fetch()
-.then(response.json())
+.then(response=>response.json(),error=>alert(error))
 .then(data=>{
    return fetch(using data of previous result);  // correct
    fetch(using data of previous result).then(response=>response.json()) // incorrect returning to old callback hell ie nesting  method within the then method
 })
-.then(response.json())
+.then(response=>response.json(),error=>alert(error))//Instead of having error block in all then blocks we can have catch block in the end to handle error.
 .then(data)
 }
 ```
+
+6. instead of having error block in all the then block we can have a catch block at the end.
+7. it has a finally block which will be inserted.
+8. throw new error will throw the error and the block which has the catch or error handler will handle the error.
+
+#### Asynchronous behind the scenes: The event loop
+
+1. in javascript there is not multitasking, it is single threaded
+2. it can do one thing at a time.
+3. java can do more than one task at a time but not javascript
+4. event loop takes callback from the callback queue and puts in call stack and from there it gets executed.
+5. how does javascript execute asynchronous non blocking code? image load, timer , ajax call all gets executed in web api environment.it does not get executed in the call stack and not in the main thread.
+6. event loop does the entire orchestration of the javascript engine.moving the code from callback queue to call stack.
+7. promise works a little bit different, fetch call gets executed in the call stack and it then waits in the web api environment and once response is recieved its not moved to callback queue instead its put in the micro tasks queue.its a priority queue. the tasks in the priority queue is executed atonce so it will be moved back to call stack to continue execution.
+
+#### Async await
+
+1. syntactic sugar over the promises
+2. use try/catch with async await
+3. await can be used without async from 2022, when used as the top level code, it blocks the entire module in a synchronous manner.(it works in script type = module)
+
+```
+(async function(){
+try{
+const city = await whereamI()
+console.log(`${city}`)
+}catch(err){
+console.log(err.message)
+}
+})
+```
+
+```
+const data = await Promise.all([fetch(),fetch(),fetch()]) // parallel calls
+```
+
+3. promise.all will short circuit when one of the api got rejected
+4. promise.race will resolve once any of the promise got resolved
+5. promise.settled will not short circuit it returns all the fullfilled and rejected response
+6. promise.any
+
+### Modern javascript development
+
+1. the code is splitted into separate modules
+2. and this separate modules are bundled into a single file(done by webpack or parcel)
+3. and this single file is transpiled and polyfilled using babel to be usable by the browser
+
+#### Module
+
+1. resusable piece of code that encapsulates implementation details
+2. usually a standalone file but it doesnt have to be.
+3. modules naturally lead to a more organised codebase.
+4. modules allows us to easily reuse the same code even across multiple projects
+5. modules can developed in isolation without thinking about the entire codebase.
+6. es6 modules are scoped to module
+7. script- top level variables are global
+8. default strict mode for esmodule
+9. import and export in es6 modules
+10. <script type= module></script> in es6
+
+#### commonjs module
+
+1. using require to import modules
+
+#### polyfilling
+
+1. to polyfill array methods we need to import core.js
+2. to polyfill async functions we need to import regenerator runtime js
 
 ## Notes:
 
@@ -622,6 +714,10 @@ fetch()
 3. Javascript can be used in the native desktop applications(electron)
 4. instead of multiple if else block we can include switch so we can avoid multiple conditions and switch will be much more clear.
 5. function should always receive an argument and should not work on the global value
+6. use early return
+7. use ternary instead of if
+8. use multiple if instead of if else
+9. use array methods instead of for loop
 
 ## links
 
