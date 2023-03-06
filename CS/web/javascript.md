@@ -569,6 +569,52 @@ document.querySelector(id).scrollIntoView({behaviour: 'smooth'})
 2. async : scripts are asynchronously and executed immediately.DOMContentLoaded does not wait for the async scripts.
 3. defer: scripts are fetched asynchronously and executed after the HTML is completely parsed.DOMContentLoaded event fires after defer script is executed. scripts are executed in order
 
+### Asynchronous Javascript
+
+1. synchronous code: code executed line by line
+2. each lines wait for the previous lines to finish(eg:alert)
+3. asynchronous code: is executed after a task that runs in the background is finished.
+4. asynchronous code is non blocking
+5. execution does not wait for the asynchronous task to finish its work
+
+### AJAX
+
+1. Asynchronous Javascript and XML: allows to communicate with remote web servers in an asynchronous way.
+2. with ajax calls we can request data from web servers dynamically.
+3. json data we get from api calls is json text string.to convert from json text to javascript object we need to use JSON.parse(jsontext)
+4. default port no for https = 443
+5. default port no for http = 80
+6. 404 means page not found
+
+#### Callback hell
+
+when we have nested callbacks in order to execute asynchronous task in sequence.it will become more hard to maintain.In order to avoid this we move to promise.
+
+#### promise
+
+when we call a fetch api we will store it in a variable which will have a promise instead of a value.The promise is an object that is used as a placeholder for the future result of an asynchronous operation.A container for asynchronously delivered value.A container for future value. Instead of nesting callbacks we can chain promises for a sequence of asynchronous operations, escaping callback hells.Its an es6 feature(ES2015)
+
+#### promise lifecycle
+
+1. before the future value its pending
+2. once asynchronous task is completed the state is settled(fullfilled,rejected)
+3. once fullfilled we will get the response. response data will be a promise so we need to use response.json() and in the next then() we can get the actual value.
+4. using the then() method we can chain multiple asynchronous sequentially.
+5. important thing to remember in promise is there will be one level of chaining
+
+```
+const getCountryData = function(){
+fetch()
+.then(response.json())
+.then(data=>{
+   return fetch(using data of previous result);  // correct
+   fetch(using data of previous result).then(response=>response.json()) // incorrect returning to old callback hell ie nesting  method within the then method
+})
+.then(response.json())
+.then(data)
+}
+```
+
 ## Notes:
 
 1. Javascript can be used in the web servers(run outside of browsers eg: nodejs)
