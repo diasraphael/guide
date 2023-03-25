@@ -12,3 +12,7 @@ select the word and press
 ```
 
 To open and close the explorer `ctrl + b`
+
+To select and copy next to the selected section
+
+`shift + alt + down`

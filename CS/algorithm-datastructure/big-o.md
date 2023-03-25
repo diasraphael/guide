@@ -95,7 +95,7 @@ Foreach, map, filter, reduce O(n)
 
 ## Algorithm
 
-Set of steps to solve a task
+### Set of steps to solve a task(A plan for solving problems)
 
 Understand the problem
 
@@ -106,3 +106,43 @@ Understand the problem
 3. what are the outputs out from the solution
 
 4. do I have enough information to solve the problem
+
+Explore with examples
+
+1. start with simple examples(simple input and output)
+
+2. progress to more complex examples(complex input and output)
+
+3. explore examples with empty inputs
+
+4. explore examples with invalid inputs
+
+Break you code
+
+1. explicitly write out the steps you need to take
+
+2. clarify the doubts
+
+Solve and simplify
+
+1. find the core difficulty in what we are trying to do
+
+2. temporarily ignore that difficulty
+
+3. write a simplified solution
+
+4. then incorporate that difficulty back in.
+
+refactor
+
+1. can you check the result
+
+2. can you derive the result differently
+
+3. can you improve the performance of your solution
+
+4. can you think of other ways to refactor
+
+5. how other people would have solved this problem
+
+### Master common problem solving patterns
