@@ -32,7 +32,7 @@
 
 ### API testing
 
-1. cy.request('GET', 'url', {
+1. """cy.request('GET', 'url', {
    'name': 'dias'
    }).then((response)=>{
    expect(response.status).equal(200)
@@ -42,7 +42,7 @@
    cy.request('POST', 'url').then((response)=>{
    expect(response.status).equal(200)
    expect(response.body.data[1].id).equal(8)
-   })
+   })"""
 
 ## Notes
 

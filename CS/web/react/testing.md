@@ -243,3 +243,72 @@ To test a function which throws error
 Const cleanFn=()=> cleanNumbers(values)
 
 Expect(cleanFn).toThrow()
+
+## JEST and React Testing library
+
+looking for single element
+
+0 matches
+getby = throw error
+queryby = null
+findby = throw error(looks for element over the span of 1 second)
+
+1 matches
+getby = element
+queryby = element
+findby = element(looks for element over the span of 1 second)
+
+greater than 1 matches
+getby = throw error
+queryby = throw error
+findby = throw error(looks for element over the span of 1 second)
+
+looking for multiple element
+
+0 matches
+getAllby = throw error
+queryAllby = []
+findAllby = throw error(looks for element over the span of 1 second)
+
+1 matches
+getALlby = element[]
+queryAllby = element[]
+findAllby = element[](looks for element over the span of 1 second)
+
+greater than 1 matches
+getAllby = element[]
+queryAllby = element[]
+findAllby = element[](looks for element over the span of 1 second)
+
+when to use each
+prove an element exists = getby, getallby
+prove an element does not exist = queryby,queryallby
+make sure an element eventually exist= findby,findallby
+
+methods
+tobeinthedocument
+not.tobeinthedocument
+tohavelength
+
+```
+test('getby',async()=>{
+render(<ColorList />)
+screen.getRole('textbox') // if it doesnt exist it will fail
+
+expect(()=>{
+screen.getByRole('textbox')
+}).toThrow(); // this will pass since the textbox doesnt exist and we expect to throw error for the same
+})
+
+expect(screen.queryByRole('textbox')
+}).toEqual(null))  // will not throw error instead returns null when it doesnt finds the element
+
+
+let errorThrown =false
+try{
+await screen.findByRole('textbox');
+}catch(err){
+errorThrown = true
+}
+expect(errorThrown).toEqual(true)
+```
