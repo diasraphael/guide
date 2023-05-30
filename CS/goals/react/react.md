@@ -12,7 +12,11 @@
 3. why virtual DOM: updating the DOM is expensive, so react minimizes dom changes
 4. react testing library: test react components without browser(used node)
 5. react goes with one way binding ie if you change a state value in a input, we will have change handler that will update the state value(angular goes with 2 way binding ie less typing, in a input value field will be associated with the state and changes will be automatically updated by the framework)
-6. JSX is compiled to js through a build step(transpilers compile jsx to js)
+
+## workflow
+
+1. JSX is compiled to js through a build step(transpilers like babel compile jsx to js) and webpack combines individual files to single bundle.js
+2. client request the initial html from server and then from the html script tag triggers to request server for the bundle.js file
 
 ## Notes
 

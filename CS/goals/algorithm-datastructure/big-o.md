@@ -1,3 +1,7 @@
+Datastructure: ways of storing data
+
+Big O - To describe the performance of the algorithm
+
 ## How to calculate the code is efficient
 
 Faster?
@@ -23,7 +27,7 @@ To identify the worst case for an algorithm
 O(n2) = quadratic
 O(n) = linear
 O(1) = constants
-O(log n)
+O(log n) = logarithmic
 
 Omega best case
 Theta average case
@@ -55,15 +59,15 @@ O(n square + n) will be treated as O(n square)
 
 ### Order of efficient programming
 
-O(1)
+O(1) = constants
 
-O(log n)
+O(log n) = logarithmic(as the inputs increase no of times decrease)
 
-O(n)
+O(n) = linear
 
-O(n log n)
+O(n2) = quadratic
 
-O(n2) n square
+O(2 pow n) = exponential
 
 ### Space complexity:
 
