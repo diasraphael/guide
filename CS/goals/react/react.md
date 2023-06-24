@@ -18,9 +18,90 @@
 1. JSX is compiled to js through a build step(transpilers like babel compile jsx to js) and webpack combines individual files to single bundle.js
 2. client request the initial html from server and then from the html script tag triggers to request server for the bundle.js file
 
+## React :
+
+1. react :library that defines what a component is and how multiple components work together.
+2. reactDOM : library knows how to display a component in browser
+3. react only cares about showing content and handling events
+
+## JSX
+
+1. inline styles are provided as objects
+2. props are written as camelCase autoFocus,maxLength
+3. numbers to be mentioned within curly braces(when using with attributes)
+4. boolean with truthy value can be written with the name alone
+
+## Component
+
+1. A function that returns a JSX
+
+## import / exports
+
+1. default exports can be renamed in the importing file
+2. named exports cannot be renamed
+
+## Events
+
+1. when we click a button an event handler or callback function is attached to it(in simple terms a normal function is attached to it)
+2. make sure you pass a reference to the function instead of calling it. if we call it using handleClick() then when we try load the page initially the function will get called. but when we just give the reference it will be called when we click the button.
+
+```
+onClick={handleClick}
+instead of
+onClick={handleClick()}
+```
+
+```
+onClick={handleClick}
+same as
+onClick={()=>{console.log("Dias")}}
+
+```
+
+## state
+
+1. when we update a state using setCount() usestate method then the corresponding component will be rerendered.
+2. when the second time the component is rerendered(calling the component again) it wont take the default value instead if will take the updated value.
+
+## http error codes
+
+1. 200: success
+2. 201: record was created
+3. 204: record was deleted
+4. 301: url you made request to has changed
+5. 400: request was bad
+6. 401: unauthorized
+7. 403: forbidden
+8. 404: not found
+9. 500: internal server error.
+
+## axios request
+
+```
+import axios from 'axios'
+
+const searchImages = async(term)=>{
+const response = await axios.get(url,{
+  headers:{
+    Authorization: 'Client-ID kjlnknkkjnklklmklmklmklmklmlklkø'
+  },
+  params:{
+    query: term
+  }
+})
+  return response.data.results;
+}
+```
+
 ## Notes
 
 1. when you write javascript code within the braces {} in a javascript file you will get autocomplete support and error messages when you have some typing errors
+2. react developer tools extension in chrome => components tab in F12 to check the values of the components passed.
+3. while importing an js file we wont give an extension but other than js files, all other files we need to write the extension while importing.
+
+## review
+
+1. event handler or callback function or simple function attached to an event(onClick) we can name as handleClick or onClick
 
 ## context
 
