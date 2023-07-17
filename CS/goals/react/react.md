@@ -93,6 +93,11 @@ const response = await axios.get(url,{
 }
 ```
 
+## async await
+
+1. await keyword tells js to wait until you receive answer from the backend once received the response is returned back.
+2. once await is added async keyword should be added for the method which has await keyword.
+
 ## Notes
 
 1. when you write javascript code within the braces {} in a javascript file you will get autocomplete support and error messages when you have some typing errors
@@ -135,3 +140,46 @@ booksContext will have provider(component used to specify what data we want to s
 
 1. hook to help you let tell react that your function isnt actually changing over the period of time.
 2. fixes bugs around useeffect
+
+### Notes
+
+#### form tag
+
+1. when we have input element and when we wrap it with form tag, and when we type something in input element and press enter, an onsubmit event from form tag will be triggered.
+
+```
+<form onSubmit={handleSubmit}>
+  <label>Email</label>
+  <input type="text" name="email">
+</form>
+```
+
+2. onclick of enter button onsubmit function will triggered and url will be updated and page gets refreshed
+   name attribute with value will be appended in the url(in normal html and js)
+
+```
+myapp.com?email=dias@gmail.com
+```
+
+3. to avoid this behaviour (page refresh and url value getting appended)
+
+```
+const handleSubmit=(event)=>{
+  event.preventDefault()   // preventing the form submission
+}
+```
+
+4. dont get value from an input using document.querySelector('input').value in react
+
+instead, do this react way of getting values from input(we are changing the input from uncontrolled input to controlled input using react state)
+
+```
+const [term, setTerm] = useState('')
+const handleChange = (event)=>{
+  setTerm(event.target.value)
+}
+<form onSubmit={handleSubmit}>
+  <label>Email</label>
+  <input value={term} onChange={handleChange}>
+</form>
+```
