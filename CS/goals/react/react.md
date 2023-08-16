@@ -130,6 +130,11 @@ console.log(rest)  // color is removed from object
 
 11. when updating a book in a list of book objects do this to avoid simultanously changed data by different users.
 
+12. when keeping the state,does any component besides accordion need to know about which item is expanded if yes keep the state in outer component else keep the state inside the component (important).event handler should be present in the same component where the state is defined
+13. react doesnt print 0,undefined,null
+14. onClick={handleClick} when this is added event will be the first argument, but when this is written onClick={()=>handleClick(index)} evnt wont be the first argument but the index will be the first argument since we are calling it manually.
+15. while setting using usestate(we have 2 options) setExpanded() we can set the value using setExpanded(true) and functional way of getting the latest value that is cued in the rendering process.
+
 ```
 
 do this
@@ -146,6 +151,8 @@ return {...book, title: newTitle}
 }
 
 ```
+
+13. code organisation: components which we can reuse, we can add it in components folder.pages folder which has also components which is not meant to be reused.(findings page)
 
 ### JSON server
 
@@ -299,3 +306,12 @@ const handleSubmit=(title)=>{
    Please be sure to restart your JSON server after making this change.
 
 3. rest client can be used as backend server which returns the response we configure with api.http file local
+
+## Design library
+
+1. Accordion
+
+### dropdown
+
+1. expose options as prop which can have [{label: '',value: ""},{label: '',value:''}]
+2.
