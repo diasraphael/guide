@@ -1,3 +1,8 @@
+What is a good code, how do we say that it is good code?
+
+1. readable
+2. scalable => we can say it through Big O
+
 Datastructure: ways of storing data
 
 Big O - To describe the performance of the algorithm

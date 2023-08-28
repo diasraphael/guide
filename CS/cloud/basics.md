@@ -1,5 +1,27 @@
 # Cloud
 
+On demand network access to a shared pool of configurable network resources(eg, networks,servers,storage,application and services)that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+
+### cloud model has 5 characteristics
+
+1. on demand self services: allowing computing users to manage their own resources without interaction with a service provider.
+2. broad network access
+3. resource pooling
+4. rapid elasticity
+5. measured service utility
+
+### cloud model has 3 service models
+
+1. IAAS
+2. PAAS
+3. SAAS
+
+### cloud model has 3 deployment models
+
+1. private cloud
+2. public cloud
+3. hybrid cloud
+
 ## IAAS
 
 I retain the complete control
