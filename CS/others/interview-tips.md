@@ -8,7 +8,17 @@ Great for your self worth
 
 Short process
 
-Craft the perfect CV
+Craft the perfect CV (add the keywords used in the job post)resumemaker.online
+
+https://github.com/aneagoie/resume-checklist
+
+jobscan.co
+
+https://www.cakeresume.com/Engineering-resume-samples
+
+https://thisresumedoesnotexist.com/
+
+https://docs.rxresu.me/tutorial/create-a-new-resume
 
 CV is the only way to make the first impression
 

@@ -1,3 +1,14 @@
+Software architects designing regular system need to know for traditional patterns:
+
+1.  non functional requirement
+2.  technology stack
+3.  component's architecture
+4.  communication patterns
+
+Cloud based systems needs information regarding
+
+1. infrastructure, networking, storage, security, hands-on
+
 Developer know what can be done to implement
 
 Architect know what should be done

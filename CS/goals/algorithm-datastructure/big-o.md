@@ -1,7 +1,11 @@
 What is a good code, how do we say that it is good code?
 
 1. readable
-2. scalable => we can say it through Big O
+2. scalable
+   => we can say it through Big O
+   => when the input increases how the code behaves
+   => we should not calculate based on the time taken since if computer is powerful it takes less time
+   => should be based on no of operations it takes to execute the program or code
 
 Datastructure: ways of storing data
 
@@ -14,6 +18,33 @@ Faster?
 Memory extensive?
 
 Readable?
+
+## Omega Notation ( Ω ) vs Big O Notation ( O ) vs Theta Notation ( θ )
+
+What is the mileage that your car gives?
+
+So let's discuss different scenarios.
+
+Let's say the car gives an average of 12 km/hr in Traffic, an average of 20 km/hr on Highway and an average of 16 km/hr in Normal City Traffic.
+
+Traffic is your worst case, Highway is your best case and Normal City Traffic is your average case.
+
+This is similar to the notations that we use for Algorithm runtime Analysis.
+
+Omega Notation ( Ω ) gives the best case complexity (highway in above case), Big O Notation ( O ) gives the worst case complexity (traffic in above case) and Theta Notation ( θ ) gives the average case complexity of an algorithm (normal city traffic in above case).
+
+Storytelling and real life examples make you understand concepts clearly.
+
+### rule book
+
+1. worst case Big(o)
+2. remove constants
+3. different terms for inputs o(x+y)
+4. drop non dominants ie we will consider the most powerful one O(n +n^2) =O(n^2)
+
+### points
+
+1. when we have 2 for loops one below other then it is big O(x+y) and when we have nested for loops then it is big O(n\*n)=O(n^2)if same array, if diff array then O(x\*y)
 
 ### Time complexity:
 
@@ -29,9 +60,9 @@ to analyze the performance of algorithm
 
 To identify the worst case for an algorithm
 
-O(n2) = quadratic
-O(n) = linear
-O(1) = constants
+O(n2) = quadratic time= very slow
+O(n) = linear time= n is the no of the inputs = grows proportionally
+O(1) = constant time= calculating only once
 O(log n) = logarithmic
 
 Omega best case
