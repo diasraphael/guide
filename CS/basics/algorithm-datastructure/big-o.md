@@ -11,11 +11,11 @@ Datastructure: ways of storing data
 
 Big O - To describe the performance of the algorithm
 
-## How to calculate the code is efficient
+## How to calculate the code is efficient or which code is efficient
 
-Faster?
+Faster? speed? find it through time complexity big O notation
 
-Memory extensive?
+Memory extensive? find it through space complexity
 
 Readable?
 
@@ -64,6 +64,7 @@ O(n2) = quadratic time= very slow
 O(n) = linear time= n is the no of the inputs = grows proportionally
 O(1) = constant time= calculating only once
 O(log n) = logarithmic
+O(n!) = nesting loop for each input= wont be used much and it is terrible
 
 Omega best case
 Theta average case
@@ -108,6 +109,10 @@ O(2 pow n) = exponential
 ### Space complexity:
 
 Auxiliary space complexity means the space taken by the algorithm to execute and not the size of the inputs.
+variables
+data structures
+function call
+allocation
 
 ## Big O notation for objects and arrays
 

@@ -124,6 +124,27 @@ set of cloud services for hosting and running applications. allows uploading you
    - With App Service - The only way to stop paying for it is to completely delete it.
 
 3. AKS
+
+   - azure kubernetes services: most popular container management platform.
+   - provides all aspects of management: routing,scaling,high availability, automated deployment,configuration
+   - allows deploying containers and managing them using kubernetes services.
+   - containers: thin packaging model packages software, its dependencies and configuration files
+   - can be copied between machines
+
+   containers vs virtual machine
+
+   - containers uses the host operating system to run the software instead in vm, on top of hypervisor we can install any no of vms and inside the vm we will have their own guest operating system and on top of that we will have our own software to run.
+   - containers can start up very fast in seconds
+   - u can have many no of containers in the server but can have very limited no of vms
+
+   Docker: is the container environment.
+
+   - dockerfile contains instructions for building custom images.
+   - docker daemon or docker server => builds images
+   - images are static files contains the software to run
+
+   Container Management:when there is a lot of containers.
+
 4. Azure functions
 
 ## ARM template
