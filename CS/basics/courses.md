@@ -1,4 +1,4 @@
-## Goals
+## Courses
 
 1. Python Course
 2. React Course
