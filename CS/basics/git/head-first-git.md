@@ -42,6 +42,6 @@ The Git repository itself is divided into two parts—the first part is called t
 When we run git add <filename> Git makes a copy of the file, and puts it in the index. We can think of the index as the “staging area”, wherein we can put things till we are sure we want to commit to them. Now when we run git commit takes the contents of the staging area and stores those in the object database, a.k.a Git’s memory bank. To put it another way, the index is a place to temporarily house changes. Typically, you make some changes, add them to the index, and then decide if you are ready to commit—if
 yes, then you make a commit. Else, you can continue making changes, add more changes to the staging area, and then when you feel you are in a good place, commit.
 
-![Staging area and object database]("/images/object_database.png")
+![Staging area and object database](../../../images/object_database.png)
 
 So what happens when we commit? Well, as we know, Git takes the contents of the index, tucks those safely into it’s memory bank, and represents that version with a commit object. This means that now, Git has a third copy of your files contents in its object database!
