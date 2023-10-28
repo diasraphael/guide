@@ -45,3 +45,28 @@ yes, then you make a commit. Else, you can continue making changes, add more cha
 ![Staging area and object database](../../../images/object_database.png)
 
 So what happens when we commit? Well, as we know, Git takes the contents of the index, tucks those safely into it’s memory bank, and represents that version with a commit object. This means that now, Git has a third copy of your files contents in its object database!
+
+![tracked and untracked](../../../images/tracked.png)
+
+![tracked and untracked](../../../images/unidirectional.png)
+
+Every file in the working directory is assigned one or more states.
+
+A brand new file added to the working directory is marked as
+“Untracked” which suggests that Git does not know about this file.
+
+Adding a new file to Git’s index does two things—it marks the file
+as being “tracked”, and creates a copy of that file into the index.
+
+When you make a commit, Git creates a copy of the files in the
+index and stores them in the object datastore. It also creates a
+commit object that records metadata about the commit, including a
+pointer to the files that were just stored, the author name and email, the time the commit was made, as well as the commit message.
+
+Every commit in Git is identified by a unique identifier, refererred to as the commit ID.
+
+## states:
+
+![tracked and untracked](../../../images/state.png)
+
+![tracked and untracked](../../../images/states.png)
