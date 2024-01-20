@@ -1,7 +1,7 @@
 What is a good code, how do we say that it is good code?
 
 1. readable
-2. scalable
+2. scalable(how we can say it is scalable)
    => we can say it through Big O
    => when the input increases how the code behaves
    => we should not calculate based on the time taken since if computer is powerful it takes less time

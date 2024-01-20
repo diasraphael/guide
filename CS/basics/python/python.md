@@ -1,3 +1,7 @@
+## Python
+
+Python is a high level general-purpose programming language. It uses a multi-paradigm approach, meaning it supports procedural, object-oriented, and some functional programming constructs.
+
 ### programming language: python
 
 1. set of instruction to the computer
@@ -31,8 +35,9 @@
 1. bin(5) // converts to a binary no
 2. int('0b101',2) // converts to a integer no
 3. type('hi') // gives str
-4. str(100) // converts to number
-5. int('100') // converts to string
+4. str(100) // converts to string
+5. int('100') // converts to integer
+6. input('enter your age') // get inputs from the user and inputs will be in string, so be careful so that you take the correct value out of it(convert to integer).
 
 ## variables
 
@@ -56,3 +61,17 @@ a single line of code (ie) a=10 // statement
 ## Notes
 
 1. formatted strings === format() // used for same purpose prefer f''
+2. print(array[0:len(array)]) // to retrieve particular values
+3.
+
+## Points
+
+1. It can work with any client-side framework, and can deliver content in almost any format (including HTML, RSS feeds, JSON, and XML).
+
+2. Django enables protection against many vulnerabilities by default, including SQL injection, cross-site scripting, cross-site request forgery and clickjacking (see Website security for more details of such attacks).
+
+3. As a result, experienced Python/Django developers typically run Python apps within independent Python virtual environments. This enables multiple different Django environments on a single computer. The Django developer team itself recommends that you use Python virtual environments!
+
+4. Experienced Python developers may install additional tools, such as linters (which help detect common errors in code).
+
+Note that you should use a Django-aware linter such as pylint-django, because some common Python linters (such as pylint) incorrectly report errors in the standard files generated for Django.
