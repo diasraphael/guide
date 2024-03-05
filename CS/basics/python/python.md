@@ -16,6 +16,7 @@ Python is a high level general-purpose programming language. It uses a multi-par
 10. notebooks: jupyter
 11. repl.it(without installing anything we can work with python)
 12. python creator guido van rossum
+13. python3 --version
 
 ## Python datatypes
 
@@ -60,9 +61,15 @@ a single line of code (ie) a=10 // statement
 
 ## Notes
 
-1. formatted strings === format() // used for same purpose prefer f''
+1. formatted strings === format() // used for same purpose prefer print(f"Hi {firstname}")
 2. print(array[0:len(array)]) // to retrieve particular values
-3.
+3. input("") // to get input from user
+4. list is similar to array, array.append to add additional value, array.sort to sort the array,array.pop to delete an element
+5. set does not allow duplicate values {1,2,4,1}
+   print({1,2,4,1}) //will print 124
+6. how to create virtual environment
+   `python -m venv fastapienv`
+   `fastapienv/Scripts/activate.bat`
 
 ## Points
 

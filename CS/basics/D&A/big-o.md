@@ -191,3 +191,28 @@ refactor
 5. how other people would have solved this problem
 
 ### Master common problem solving patterns
+
+### Data-structures
+
+1. how data is stored
+
+Datastructures
+Arrays:
+
+lookup: O(1)
+push: O(1)
+
+Stacks:
+Queues:
+Linked Lists:
+Trees:
+Tries:
+Graphs:
+Hash Tables:
+
+Algorithms
+
+1. Sorting
+2. Dynamic programming
+3. BFS + DFS
+4. Recursion
