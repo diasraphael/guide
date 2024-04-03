@@ -201,6 +201,9 @@ Arrays:
 
 lookup: O(1)
 push: O(1)
+pop: O(1)
+insert: O(n)
+delete: O(n)
 
 Stacks:
 Queues:
