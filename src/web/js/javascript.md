@@ -824,3 +824,9 @@ observer.unobserve(entry.target)
 const imgObserver = new IntersectionObserver(loadImg, {root: null,threshold: 0, rootMargin: 200px})
 imgTargets.forEach(img=>imgObserver.observe(img))
 ```
+
+## points to remember
+
+1. JavaScript clearly has the ability to manipulate page elements and do calculations on-the-fly.
+   We could use this to create an environment which behaves extensibility. However, it considered bad mo-jo to handle page layout with JavaScript.
+   I agree with this in general, but I do believe you can use JavaScript in this way as long you do so unobtrusively and take care to ensure the page will fall back to a usable layout with JavaScript disabled.
