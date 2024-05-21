@@ -60,11 +60,11 @@ to analyze the performance of algorithm
 
 To identify the worst case for an algorithm
 
+O(n!) = nesting loop for each input= wont be used much and it is terrible
 O(n2) = quadratic time= very slow
 O(n) = linear time= n is the no of the inputs = grows proportionally
-O(1) = constant time= calculating only once
 O(log n) = logarithmic
-O(n!) = nesting loop for each input= wont be used much and it is terrible
+O(1) = constant time= calculating only once
 
 Omega best case
 Theta average case
@@ -128,7 +128,7 @@ Pushing and removing O(1)
 
 Pushing and removing in last O(1)
 
-Pushing and removing in the beginning O(n)
+Pushing and removing in the beginning O(n)(shift,unshift)
 
 Access: O(1)
 
@@ -162,7 +162,7 @@ Explore with examples
 
 4. explore examples with invalid inputs
 
-Break you code
+Break your code
 
 1. explicitly write out the steps you need to take
 
@@ -196,14 +196,18 @@ refactor
 
 1. how data is stored
 
-Datastructures
+### Datastructures
+
 Arrays:
 
 lookup: O(1)
 push: O(1)
 pop: O(1)
-insert: O(n)
-delete: O(n)
+insert: O(n)(unshift)
+delete: O(n)(shift)
+
+static arrays: fixed size of the array ahead of time
+dynamic arrays: dynamic size of the array
 
 Stacks:
 Queues:
