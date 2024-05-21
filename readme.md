@@ -2,4 +2,4 @@
 
 Docs covering fundamentals
 
-[Basics of algorithm](src/algo/basics.md)
+[Basics of algorithm](src/code/DSA/basics.md)
