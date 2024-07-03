@@ -124,20 +124,6 @@ Searching: O(n)
 
 Pushing and removing O(1)
 
-### Arrays
-
-Pushing and removing in last O(1)
-
-Pushing and removing in the beginning O(n)(shift,unshift)
-
-Access: O(1)
-
-Searching: O(n)
-
-Splice, slice O(n)
-
-Foreach, map, filter, reduce O(n)
-
 ## Algorithm
 
 ### Set of steps to solve a task(A plan for solving problems)
@@ -199,6 +185,28 @@ refactor
 ### Datastructures
 
 Arrays:
+
+### Arrays
+
+Pushing and removing in last O(1)
+push()
+pop()
+
+Pushing and removing in the beginning O(n)
+unshift('x')-inserts the element to the beginning of the array
+splice()- inserts element to any position of the array
+
+static array - fixed in size - size known before hand.
+
+dynamic array - expands automatically
+
+Access or look up: O(1)
+
+Searching: O(n)
+
+Splice, slice O(n)
+
+Foreach, map, filter, reduce O(n)
 
 lookup: O(1)
 push: O(1)
