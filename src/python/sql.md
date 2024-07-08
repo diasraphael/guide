@@ -21,3 +21,14 @@ LIMIT:
 let you specify exactly how many rows to return and which row to start with
 
 COMPOSITE KEY:A key made of 2 or more columns is known as composite key
+
+## Aggregate Functions
+
+take multiple inputs and return single output.
+avg() returns average
+count() count of all the values
+max() returns maximum value
+min() returns minimum value
+sum() returns sum of all values
+
+## GROUPBY
